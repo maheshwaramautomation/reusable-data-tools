@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reusable-data-tools"
+version = "0.1.0"
+description = "Portable Python data processing and integration helpers"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+excel = ["openpyxl>=3.1"]
+mysql = ["pymysql>=1.1"]
+sqlserver = ["pyodbc>=5"]
+vault = ["requests>=2.31"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
